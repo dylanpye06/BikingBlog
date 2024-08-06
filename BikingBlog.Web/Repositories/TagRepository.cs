@@ -63,3 +63,6 @@ namespace BikingBlog.Web.Repositories
         }
     }
 }
+
+
+// we dont like calling the datbase from the controller ( directly ) which is why we call it from the repository

@@ -14,5 +14,6 @@ namespace BikingBlog.Web.Repositories
 
         Task<Tag?> DeleteAsync(Guid id);
 
+        // questions mark - if it doesnt find an account to delete / find orupdtate it will return a null
     }
 }

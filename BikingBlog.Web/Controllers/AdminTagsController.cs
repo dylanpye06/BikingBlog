@@ -16,30 +16,25 @@ namespace BikingBlog.Web.Controllers
             this.tagRepository = tagRepository;
         }
 
-
         [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
 
-
         [HttpPost]
         [ActionName("Add")]
         public async Task<IActionResult> Add(AddTagRequest addTagRequest)
         {
-
             var tag = new Tag
             {
                 Name = addTagRequest.Name,
                 DisplayName = addTagRequest.DisplayName
             };
-
             await tagRepository.AddAsync(tag);
 
             return RedirectToAction("List");
         }
-
 
         [HttpGet]
         [ActionName("List")]
@@ -49,7 +44,6 @@ namespace BikingBlog.Web.Controllers
 
             return View(tags);
         }
-
 
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
@@ -70,7 +64,6 @@ namespace BikingBlog.Web.Controllers
 
             return View(null);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Edit(EditTagRequest editTagRequest)
@@ -94,8 +87,7 @@ namespace BikingBlog.Web.Controllers
             }
 
             return RedirectToAction("List", new { id = editTagRequest.Id });
-        }
-    
+        }   
         
         [HttpPost]
         public async Task<IActionResult> Delete(EditTagRequest editTagRequest) 
@@ -108,11 +100,9 @@ namespace BikingBlog.Web.Controllers
                 return RedirectToAction("List");
             }          
            
-                //want to show error message
-            
+                //want to show error message            
             
             return RedirectToAction("Edit", new { id = editTagRequest.Id });
-
         }
     }
 }

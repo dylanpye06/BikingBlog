@@ -48,7 +48,7 @@
 
         <div class="mb-3">
             <label class="form-label">Author</label>
-            <input type="text" class="form-control" id="author" asp-for="Author" />
+            <input type="text" class="form-control" id="author" asp-for="Auther" />
         </div>
 
         <div class="form-check mb-3">
@@ -58,7 +58,12 @@
             </label>
         </div>
 
-
+        <div class="mb-3">
+            <label class="form-label">Tags</label>
+                <select class="form-select" asp-items="@Model.Tags"
+                    asp-for="SelectedTags">
+                </select>
+        </div>
 
         <div class="mb-3">
             <button type="submit" class="btn btn-success">

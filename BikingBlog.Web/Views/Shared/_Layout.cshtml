@@ -29,11 +29,13 @@
                                 Admin
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" 
+                                <li>
+                                    <a class="dropdown-item" 
                                     asp-area=""
                                     asp-controller="AdminTags"
                                     asp-action="Add">
-                                    Add Tag</a></li>
+                                    Add Tag
+                                </a></li>
 
                                 <li>
                                     <a class="dropdown-item"
@@ -48,8 +50,17 @@
                                     <a class="dropdown-item"
                                        asp-area=""
                                        asp-controller="AdminBlogPosts"
-                                       asp-action="AddBlogPost">
+                                       asp-action="Add">
                                         Add Blog Post
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-area=""
+                                       asp-controller="AdminBlogPosts"
+                                       asp-action="List">
+                                        View Blog Posts
                                     </a>
                                 </li>
 

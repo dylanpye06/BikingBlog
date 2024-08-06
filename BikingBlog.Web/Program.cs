@@ -11,6 +11,9 @@ builder.Services.AddDbContext<BlogDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("BikingBlogConnectionString")));
 
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<IBlogPostRepository, BlogPostRepository>();
+
+// inject the itag repostires to the database - instantlu accessed ?
 
 var app = builder.Build();
 
